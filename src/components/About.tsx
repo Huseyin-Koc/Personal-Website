@@ -11,7 +11,9 @@ const About: React.FC = () => {
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
       className="py-20 bg-transparent flex justify-center items-center"
-    >
+     >  <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
+        About Me
+        </h2>
       <div className="flex flex-col md:flex-row items-center gap-10 w-full max-w-5xl mx-auto">
         {/* Profile Icon */}
         <div className="flex-shrink-0 flex justify-center items-center w-48 h-48 rounded-full bg-green-600/90 shadow-lg">
@@ -27,7 +29,7 @@ const About: React.FC = () => {
               <span className="flex items-center gap-1"><MapPin size={18} className="text-green-400" /> Izmir, Turkey</span>
             </div>
             <p className="text-gray-200 mb-4">
-              I am a computer engineering student at Ege University, passionate about technology and the world of computers. I am constantly striving to improve myself and make the most of the opportunities technology offers. My career goal is to specialize in software development and produce innovative solutions. I am committed to continuous learning and self-improvement, aiming to play an important role in the tech world in the future.
+              I'm a computer engineering student at Ege University, passionate about technology and the world of computers. I am constantly striving to improve myself and make the most of the opportunities technology offers. My career goal is to specialize in software development and produce innovative solutions. I am committed to continuous learning and self-improvement, aiming to play an important role in the tech world in the future.
             </p>
             <div className="flex flex-col md:flex-row gap-6 mb-4">
               <div className="flex items-center gap-2 text-green-400">
