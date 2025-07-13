@@ -87,38 +87,35 @@ const Contact: React.FC = () => {
       viewport={{ once: true }}
       className="py-20 relative"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Başlık ve açıklama ortalanmış */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
             Contact
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            You can use the form below to contact me or reach me directly via my contact information.
-          </p>
+
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-10 items-start">
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="space-y-8 w-full"
           >
             <div>
               <h3 className="text-2xl font-semibold text-white mb-6">
                 Contact Information
               </h3>
-              <p className="text-gray-400 mb-8 leading-relaxed">
-                You can contact me for your projects. I will get back to you as soon as possible.
-              </p>
+
             </div>
 
             <div className="space-y-6">
@@ -131,7 +128,7 @@ const Contact: React.FC = () => {
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.05 }}
-                  className="flex items-center space-x-4 p-4 glass-effect rounded-lg hover:bg-white/10 transition-all duration-300"
+                  className="flex items-center space-x-4 p-4 glass-effect rounded-lg hover:bg-white/10 transition-all duration-300 w-full"
                 >
                   <div className="p-3 bg-primary-500/20 rounded-lg">
                     <info.icon className="text-primary-400" size={24} />
@@ -151,9 +148,9 @@ const Contact: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="relative"
+            className="relative w-full"
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6 w-full">
               <div className="grid md:grid-cols-2 gap-6">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}

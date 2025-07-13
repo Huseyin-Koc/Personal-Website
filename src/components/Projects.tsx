@@ -22,9 +22,6 @@ const Projects: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
             My Projects
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Projects and works I have developed
-          </p>
         </motion.div>
         {/* Project Cards Grid */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">

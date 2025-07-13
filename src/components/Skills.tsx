@@ -40,9 +40,6 @@ const Skills: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
             My Skills
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Areas I specialize in modern web development
-          </p>
         </motion.div>
 
         <div className="space-y-12">
