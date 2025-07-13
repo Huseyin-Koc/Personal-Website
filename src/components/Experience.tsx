@@ -60,8 +60,8 @@ const Experience: React.FC = () => {
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50, rotate: -2 }}
+                whileInView={{ opacity: 1, x: 0, rotate: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
                 className={`relative flex items-center ${
@@ -69,7 +69,7 @@ const Experience: React.FC = () => {
                 }`}
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-gradient-to-r from-primary-500 to-purple-500 rounded-full border-4 border-dark-800"></div>
+                <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-gradient-to-r from-primary-500 to-purple-500 rounded-full border-4 border-dark-800 shadow-lg shadow-primary-500/40"></div>
 
                 {/* Content Card */}
                 <div
@@ -80,18 +80,30 @@ const Experience: React.FC = () => {
                   }`}
                 >
                   <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    className="p-6 glass-effect rounded-xl card-hover"
+                    whileHover={{
+                      scale: 1.04,
+                      rotate: index % 2 === 0 ? 2 : -2,
+                      boxShadow: "0 8px 32px 0 rgba(80,0,255,0.25), 0 0 16px 4px #a78bfa",
+                      borderColor: "#a78bfa",
+                      transition: { duration: 0.3 },
+                    }}
+                    whileTap={{
+                      scale: 0.98,
+                      boxShadow: "0 4px 16px 0 rgba(80,0,255,0.15)",
+                      borderColor: "#38bdf8",
+                    }}
+                    className="p-6 glass-effect rounded-xl card-hover border-2 border-primary-500/40 transition-all duration-300 shadow-xl hover:shadow-2xl hover:border-purple-400 group relative overflow-hidden"
                   >
+                    {/* Glow border animation */}
+                    <span className="absolute inset-0 rounded-xl pointer-events-none border-2 border-transparent group-hover:border-purple-400 group-hover:animate-pulse-glow"></span>
                     {/* Header */}
                     <div className="mb-4">
-                      <h3 className="text-xl font-semibold text-white mb-2">
+                      <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors duration-300">
                         {exp.title}
                       </h3>
-                      <h4 className="text-lg text-primary-400 font-medium mb-2">
+                      <h4 className="text-lg text-primary-400 font-medium mb-2 group-hover:text-purple-300 transition-colors duration-300">
                         {exp.company}
                       </h4>
-
                       <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3">
                         <div className="flex items-center space-x-1">
                           <Calendar size={16} />
@@ -116,7 +128,7 @@ const Experience: React.FC = () => {
                             viewport={{ once: true }}
                             className="flex items-start space-x-2 text-gray-300"
                           >
-                            <span className="text-primary-400 mt-1">•</span>
+                            <span className="text-primary-400 mt-1 group-hover:text-purple-400 transition-colors duration-300">•</span>
                             <span>{item}</span>
                           </motion.li>
                         ))}
@@ -125,7 +137,7 @@ const Experience: React.FC = () => {
 
                     {/* Technologies */}
                     <div>
-                      <h5 className="text-sm font-medium text-gray-400 mb-2">
+                      <h5 className="text-sm font-medium text-gray-400 mb-2 group-hover:text-purple-300 transition-colors duration-300">
                         Technologies Used:
                       </h5>
                       <div className="flex flex-wrap gap-2">
@@ -136,7 +148,7 @@ const Experience: React.FC = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ delay: techIndex * 0.05 }}
                             viewport={{ once: true }}
-                            className="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-xs font-medium"
+                            className="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-xs font-medium group-hover:bg-purple-500/30 group-hover:text-purple-200 transition-all duration-300"
                           >
                             {tech}
                           </motion.span>
@@ -159,11 +171,12 @@ const Experience: React.FC = () => {
           className="mt-32 flex flex-col items-center justify-center"
         >
           <div className="flex flex-col items-center mb-10">
-            <span className="mb-2">
-              {/* Graduation Cap Icon */}
+            <span className="mb-2 relative flex items-center justify-center">
+              {/* Animated Graduation Cap Icon with Glow */}
+              <span className="absolute inset-0 rounded-full blur-xl bg-gradient-to-tr from-primary-400/40 to-purple-400/30 animate-pulse-glow"></span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-12 text-primary-400 animate-bounce-slow"
+                className="h-12 w-12 text-primary-400 animate-spin-slow"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -186,23 +199,52 @@ const Experience: React.FC = () => {
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
             viewport={{ once: true }}
-            whileHover={{ scale: 1.03 }}
-            className="w-full max-w-xl p-8 glass-effect rounded-2xl card-hover shadow-2xl border border-primary-500/30"
+            whileHover={{
+              scale: 1.03,
+              boxShadow: "0 8px 32px 0 rgba(80,0,255,0.25), 0 0 16px 4px #a78bfa",
+              borderColor: "#a78bfa",
+            }}
+            className="w-full max-w-xl p-8 glass-effect rounded-2xl card-hover shadow-2xl border-2 border-primary-500/30 hover:border-purple-400 transition-all duration-300 group relative overflow-hidden"
           >
-            <h4 className="text-2xl md:text-3xl font-bold gradient-text mb-1 font-sans">
-              Computer Engineering
-            </h4>
-            <h5 className="text-lg md:text-xl text-blue-400 mb-1 font-medium font-sans">
-              Ege University
-            </h5>
-            <p className="text-gray-400 text-base mb-2 font-mono">
-              18/08/2021 – 11/07/2025
-            </p>
-            <p className="text-gray-300 text-base">
-              Thesis: ONAP and OSM Platform Installation and Comparative
-              Analysis at Component Level. My supervisor: Prof. Dr. Orhan
-              Dağdeviren.
-            </p>
+            {/* Okul logosu veya ikon */}
+            <div className="flex items-center gap-3 mb-4">
+              <span className="bg-primary-500/20 p-2 rounded-full">
+                <svg className="w-7 h-7 text-primary-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0v6m0 0c-4.418 0-8-1.79-8-4" />
+                </svg>
+              </span>
+              <div>
+                <h4 className="text-2xl md:text-3xl font-bold gradient-text mb-1 font-sans">
+                  Computer Engineering
+                </h4>
+                <h5 className="text-lg md:text-xl text-blue-400 mb-1 font-medium font-sans">
+                  Ege University
+                </h5>
+              </div>
+            </div>
+            {/* Tarih badge */}
+            <div className="flex items-center gap-2 mb-3">
+              <span className="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-xs font-semibold">
+                18/08/2021 – 11/07/2025
+              </span>
+              <span className="px-2 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-semibold">
+                2.97/4 GPA
+              </span>
+            </div>
+            {/* Bilgiler */}
+            <ul className="list-disc list-inside text-gray-300 mb-3 space-y-1 pl-2">
+              <li>
+                Thesis: <span className="text-white font-medium">ONAP and OSM Platform Installation and Comparative Analysis at Component Level</span>
+              </li>
+              <li>
+                Supervisor: <span className="text-white font-medium">Prof. Dr. Orhan Dağdeviren</span>
+              </li>
+            </ul>
+            {/* Progress bar */}
+            <div className="w-full h-3 bg-dark-700 rounded-full overflow-hidden mt-4">
+              <div className="h-full bg-gradient-to-r from-primary-500 to-purple-500 animate-progress-bar" style={{ width: "100%" }}></div>
+            </div>
+            <div className="text-xs text-gray-400 mt-1 text-right">Graduation Progress: 100%</div>
           </motion.div>
         </motion.div>
       </div>
