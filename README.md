@@ -1,4 +1,4 @@
-# Kişisel Portfolio Web Sitesi
+# Kişisel Web Sitem
 
 Modern, animasyonlu ve responsive bir kişisel CV/portfolio web sitesi. React, TypeScript, Tailwind CSS ve Framer Motion kullanılarak geliştirilmiştir.
 
