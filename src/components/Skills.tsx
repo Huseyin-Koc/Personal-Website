@@ -6,33 +6,25 @@ const Skills: React.FC = () => {
     {
       category: 'Programming Languages',
       skills: [
-        { name: 'Python', level: 85, color: 'from-blue-500 to-purple-600' },
-        { name: 'C#', level: 80, color: 'from-purple-500 to-pink-500' },
-        { name: 'Java', level: 75, color: 'from-orange-500 to-red-500' },
+        { name: 'Python', level: 65, color: 'from-blue-500 to-purple-600' },
+        { name: 'C#', level: 75, color: 'from-purple-500 to-pink-500' },
+        { name: 'Java', level: 70, color: 'from-orange-500 to-red-500' },
         { name: 'JavaScript', level: 70, color: 'from-yellow-400 to-orange-500' },
         { name: 'HTML/CSS', level: 75, color: 'from-orange-500 to-red-500' },
       ]
     },
     {
-      category: 'Databases & Frameworks',
+      category: 'Databases & Tools',
       skills: [
-        { name: 'MySQL', level: 80, color: 'from-blue-400 to-blue-600' },
-        { name: 'Oracle DB', level: 75, color: 'from-red-500 to-orange-500' },
-        { name: 'PL/SQL', level: 70, color: 'from-blue-600 to-blue-800' },
-        { name: 'ASP.NET MVC', level: 75, color: 'from-purple-600 to-purple-800' },
-        { name: 'Entity Framework', level: 70, color: 'from-green-500 to-green-700' },
-      ]
-    },
-    {
-      category: 'Tools & Technologies',
-      skills: [
-        { name: 'Git', level: 80, color: 'from-orange-500 to-red-600' },
-        { name: 'Visual Studio', level: 85, color: 'from-purple-500 to-blue-600' },
-        { name: 'IntelliJ IDEA', level: 75, color: 'from-red-500 to-pink-600' },
-        { name: 'PyCharm', level: 80, color: 'from-green-500 to-green-700' },
-        { name: 'Docker', level: 65, color: 'from-blue-500 to-blue-700' },
+        { name: 'MySQL', level: 90, color: 'from-blue-400 to-blue-600' },
+        { name: 'Oracle DB', level: 60, color: 'from-red-500 to-orange-500' },
+        { name: 'PL/SQL', level: 70, color: 'from-orange-600 to-blue-800' },
+        { name: 'Git', level: 65, color: 'from-purple-600 to-purple-800' },
+        { name: 'Docker', level: 60, color: 'from-green-500 to-green-700' },
+        {name: 'Kubernetes', level: 50, color: 'from-yellow-500 to-red-700' },
       ]
     }
+
   ];
 
   return (

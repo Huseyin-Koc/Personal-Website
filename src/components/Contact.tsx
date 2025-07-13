@@ -30,13 +30,19 @@ const Contact: React.FC = () => {
       title: 'Phone',
       value: '(+90) 5415700509',
       href: 'tel:+905415700509'
+    },
+    {
+      icon: Github,
+      title: 'GitHub',
+      value: 'Huseyin-Koc',
+      href: 'https://github.com/Huseyin-Koc'
+    },
+    {
+      icon: Linkedin,
+      title: 'LinkedIn',
+      value: 'hüseyin-koç',
+      href: 'https://www.linkedin.com/in/hüseyin-koç-96083a229/'
     }
-  ];
-
-  const socialLinks = [
-    { icon: Github, href: 'https://github.com/Huseyin-Koc', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/hüseyin-koç-96083a229/', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:kochuseyin@hotmail.fr', label: 'Email' },
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -135,22 +141,6 @@ const Contact: React.FC = () => {
                     <p className="text-gray-400">{info.value}</p>
                   </div>
                 </motion.a>
-              ))}
-            </div>
-
-            {/* Social Media Icons */}
-            <div className="flex justify-center gap-6 pt-8">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-4 rounded-full bg-white/10 hover:bg-primary-600 transition-colors duration-300 text-primary-400 hover:text-white text-2xl"
-                  aria-label={social.label}
-                >
-                  <social.icon size={32} />
-                </a>
               ))}
             </div>
           </motion.div>
@@ -290,4 +280,4 @@ const Contact: React.FC = () => {
   );
 };
 
-export default Contact; 
+export default Contact;
