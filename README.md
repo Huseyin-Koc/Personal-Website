@@ -1,4 +1,4 @@
-# Kişisel Portfolio Web Sitesi
+# Kişisel Web Sitem
 
 Modern, animasyonlu ve responsive bir kişisel CV/portfolio web sitesi. React, TypeScript, Tailwind CSS ve Framer Motion kullanılarak geliştirilmiştir.
 
@@ -22,26 +22,6 @@ Modern, animasyonlu ve responsive bir kişisel CV/portfolio web sitesi. React, T
 - **Framer Motion** - Animasyon kütüphanesi
 - **Lucide React** - Modern ikonlar
 - **Vite** - Hızlı build tool
-
-## 📦 Kurulum
-
-1. Projeyi klonlayın:
-```bash
-git clone <repository-url>
-cd Personal-Website
-```
-
-2. Bağımlılıkları yükleyin:
-```bash
-npm install
-```
-
-3. Geliştirme sunucusunu başlatın:
-```bash
-npm start
-```
-
-4. Tarayıcınızda [http://localhost:3000](http://localhost:3000) adresini açın.
 
 ## 🎨 Özelleştirme
 
@@ -95,19 +75,3 @@ Site aşağıdaki breakpoint'lerde optimize edilmiştir:
 ## 📄 Lisans
 
 Bu proje MIT lisansı altında lisanslanmıştır.
-
-## 🤝 Katkıda Bulunma
-
-1. Fork edin
-2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
-3. Commit edin (`git commit -m 'Add some amazing feature'`)
-4. Push edin (`git push origin feature/amazing-feature`)
-5. Pull Request oluşturun
-
-## 📞 İletişim
-
-Herhangi bir sorunuz varsa, lütfen issue açın veya iletişime geçin.
-
----
-
-⭐ Bu projeyi beğendiyseniz yıldız vermeyi unutmayın! 
