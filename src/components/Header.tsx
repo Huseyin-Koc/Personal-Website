@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import Aurora from './Aurora'; // <-- Aurora importu
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,8 +32,20 @@ const Header: React.FC = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'glass-effect shadow-lg' : 'bg-transparent'
       }`}
+      style={{ position: 'fixed', overflow: 'hidden', left: 0, right: 0, top: 0 }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Aurora arka plan */}
+      <Aurora
+        colorStops={['#3A29FF', '#FF94B4', '#FF3232']}
+        blend={0.5}
+        amplitude={1.0}
+        speed={0.5}
+      />
+      {/* Header içeriği */}
+      <div
+        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        style={{ position: 'relative', zIndex: 10 }}
+      >
         <div className="flex justify-between items-center h-16">
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -95,4 +108,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header; 
+export default Header;

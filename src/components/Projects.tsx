@@ -2,8 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const featured = {
-  title: "Akıllı Maç Analizi",
-  desc: "A web platform for smart machine data analysis and visualization.",
+  title: "Smart Match Analysis",
+  desc: "Smart Match Analysis is a professional football analytics platform that deeply examines and visualizes the complete statistics of a selected team and referee, then delivers AI-driven predictions for the upcoming match.",
   link: "https://www.akillimacanalizi.com/",
   linkText: "Visit Website",
   image: "/logo.png", // Veya bir görsel ekleyebilirsin
@@ -12,21 +12,21 @@ const featured = {
 const others = [
   {
     title: "Smart Parking App",
-    desc: "A mobile app to find, reserve, and pay for parking spaces in urban areas.",
+    desc: "A mobile app to find, reserve, and pay with QR code for parking spaces in urban areas.",
     link: "https://github.com/Huseyin-Koc/Smart-Parking-App",
     linkText: "View on GitHub",
     delay: 0.2,
   },
   {
     title: "StepTrackPro",
-    desc: "A smart Android app for tracking daily steps, calories, and task goals.",
+    desc: "A smart Android app for tracking steps, calories, and statistics.",
     link: "https://github.com/Huseyin-Koc/StepTrackPro",
     linkText: "View on GitHub",
     delay: 0.3,
   },
   {
     title: "Appointment System",
-    desc: "A web-based appointment scheduling and management system.",
+    desc: "A web app for patient appointment booking, doctor approvals, and admin monitoring.",
     link: "https://github.com/Huseyin-Koc/Appointment-System",
     linkText: "View on GitHub",
     delay: 0.4,

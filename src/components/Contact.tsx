@@ -28,7 +28,7 @@ const Contact: React.FC = () => {
     {
       icon: Phone,
       title: 'Phone',
-      value: '(+90) 5415700509',
+      value: '(+90)541 570 0509',
       href: 'tel:+905415700509'
     },
     {
@@ -108,7 +108,6 @@ const Contact: React.FC = () => {
             viewport={{ once: true }}
             className="text-gray-400 text-lg"
           >
-            You can use the form below to contact me or reach me directly via my contact information.
           </motion.p>
         </motion.div>
 
@@ -128,7 +127,7 @@ const Contact: React.FC = () => {
           >
             <div>
               <h3 className="text-2xl font-semibold text-white mb-6">
-                Contact Information
+                
               </h3>
             </div>
             <div className="space-y-6">

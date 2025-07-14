@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDownToLine } from 'lucide-react';
+import GlitchText from './GlitchText';
 
 const Hero: React.FC = () => {
   // Scroll to About section
@@ -40,7 +41,9 @@ const Hero: React.FC = () => {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="text-6xl md:text-8xl font-bold gradient-text mb-4"
         >
-          Hüseyin Koç
+          <GlitchText speed={1} enableShadows={true} enableOnHover={true} className="custom-class">
+            Hüseyin Koç
+          </GlitchText>
         </motion.h1>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

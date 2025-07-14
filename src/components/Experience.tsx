@@ -15,7 +15,7 @@ const Experience: React.FC = () => {
         "Team collaboration and project management experience",
         "Working in a professional software development environment",
       ],
-      technologies: ["C#", "ASP.NET MVC", "SQL Server", "Git", "Visual Studio"],
+      technologies: ["C#", "ASP.NET MVC", "Oracle Database", "PL/SQL"],
     },
     {
       title: "Machine Technician",
